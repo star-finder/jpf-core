@@ -276,7 +276,8 @@ public class MethodInfo extends InfoObject implements GenericSignatureHolder  {
     }
     
     this.globalId = mthTable.size();
-    mthTable.add(this);    
+    mthTable.add(this);  
+    localVars = EMPTY;
   }
 
   public MethodInfo (ClassInfo ci, String name, String signature, int modifiers){
