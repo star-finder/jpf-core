@@ -35,7 +35,10 @@ public class FDIV extends Instruction implements JVMInstruction {
 
     float v1 = frame.popFloat();
     float v2 = frame.popFloat();
-    
+    if (v1 == 0) {
+        return ti.createAndThrowException("java.lang.ArithmeticException",
+                                          "division by zero");
+      }
     float r = v2 / v1;
     frame.push(Types.floatToInt(r), false);
 
