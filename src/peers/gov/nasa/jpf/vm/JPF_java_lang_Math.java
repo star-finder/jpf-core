@@ -183,4 +183,84 @@ public class JPF_java_lang_Math extends NativePeer {
   public double tan__D__D (MJIEnv env, int clsObjRef, double a) {
     return Math.tan(a);
   }
+  
+  @MJI
+  public double cbrt__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.cbrt(a);
+  }
+  
+  @MJI
+  public double cosh__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.cosh(a);
+  }
+  
+  @MJI
+  public int decrementExact__I__I (MJIEnv env, int clsObjRef, int a) {
+    return Math.decrementExact(a);
+  }
+  
+  @MJI
+  public double expm1__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.expm1(a);
+  }
+  
+  @MJI
+  public int getExponent__F__I (MJIEnv env, int clsObjRef, float a) {
+    return Math.getExponent(a);
+  }
+  
+  @MJI
+  public int incrementExact__I__I (MJIEnv env, int clsObjRef, int a) {
+    return Math.incrementExact(a);
+  }
+  
+  @MJI
+  public double log1p__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.log1p(a);
+  }
+  
+  @MJI
+  public int negateExact__I__I (MJIEnv env, int clsObjRef, int a) {
+    return Math.negateExact(a);
+  }
+  
+  @MJI
+  public float nextDown__F__F (MJIEnv env, int clsObjRef, float a) {
+    return Math.nextDown(a);
+  }
+  
+  @MJI
+  public float nextUp__F__F (MJIEnv env, int clsObjRef, float a) {
+    return Math.nextUp(a);
+  }
+  
+  @MJI
+  public float signum__F__F (MJIEnv env, int clsObjRef, float a) {
+    return Math.signum(a);
+  }
+  
+  @MJI
+  public double sinh__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.sinh(a);
+  }
+  
+  @MJI
+  public double tanh__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.tanh(a);
+  }
+  
+  @MJI
+  public double toDegrees__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.toDegrees(a);
+  }
+  
+  @MJI
+  public double toRadians__D__D (MJIEnv env, int clsObjRef, double a) {
+    return Math.toRadians(a);
+  }
+  
+  @MJI
+  public float ulp__F__F (MJIEnv env, int clsObjRef, float a) {
+    return Math.ulp(a);
+  }
 }

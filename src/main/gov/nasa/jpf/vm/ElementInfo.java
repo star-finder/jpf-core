@@ -1392,6 +1392,10 @@ public abstract class ElementInfo implements Cloneable {
     return ci.isArray();
   }
 
+  public boolean isBooleanArray(){
+	return (fields instanceof BooleanArrayFields);
+  }
+  
   public boolean isCharArray(){
     return (fields instanceof CharArrayFields);
   }

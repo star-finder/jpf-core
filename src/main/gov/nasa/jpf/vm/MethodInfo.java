@@ -25,6 +25,7 @@ import gov.nasa.jpf.util.LocationSpec;
 import gov.nasa.jpf.vm.bytecode.ReturnInstruction;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -540,9 +541,14 @@ public class MethodInfo extends InfoObject implements GenericSignatureHolder  {
     LocalVarInfo[] argLvis = new LocalVarInfo[nArgs];
     int n = 0; // how many args we've got so far
     
+//    System.out.println(Arrays.toString(localVars));
+    
+    Config config = VM.getVM().getConfig();
+	boolean isInstrument = Boolean.parseBoolean(config.getProperty("costar.instrument", "false"));
+    
     for (LocalVarInfo lvi : localVars){
       // arguments are the only ones that are immediately in scope
-      if (lvi.getStartPC() == 0){
+      if (lvi.getStartPC() == 0 || isInstrument && lvi.getStartPC() == 3){
         if (n == nArgs){ // ARGH - more in-scope vars than args
           throw new JPFException("inconsistent localVar table for method " + getFullName());
         }
